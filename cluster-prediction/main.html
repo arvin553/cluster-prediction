@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>kmeans</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type='text/css' href="css/main.css">
+	<meta name='viewport' content="width=device-width,initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src ="js/main.js"></script>
+</head>
+<body>
+	<div id='mainleft'>
+		<p class="subtitle">變數輸入</p>
+		<hr>
+		<div>
+			<table>
+				
+				<tr>
+					<td>age</td>
+					<td><input type="text" id="age"></td>
+					<td>sex</td>
+					<td>
+						<select id='sexselect'>
+							<option value="MALE">male</option>
+							<option value="FEMALE">female</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>region</td>
+					<td><select id="regionselect">
+							<option value ="INNER_CITY">inner_city</option>
+							<option value ="TOWN">town</option>
+							<option value ="RURAL">rural</option>
+							<option value ="SUBURBAN">suburban</option>
+						</select>
+					</td>
+					<td>income</td>
+					<td><input type="text" id="income"></td>
+				</tr>
+				<tr>
+					<td>married</td>
+					<td><select id="marriedselect">
+							<option value ="YES">yes</option>
+							<option value ="NO">no</option>
+						</select></td>
+					<td>children</td>
+					<td><select id="childrenselect">
+							<option value ="0">0</option>
+							<option value ="1">1</option>
+							<option value ="2">2</option>
+							<option value ="3">3</option>
+						</select></td>
+				</tr>
+				<tr>
+					<td>car</td>
+					<td><select id="carselect">
+							<option value ="YES">yes</option>
+							<option value ="NO">no</option>
+						</select></td>
+					<td>save_act</td>
+					<td><select id="save_actselect">
+							<option value ="YES">yes</option>
+							<option value ="NO">no</option>
+						</select></td>
+				</tr>
+				<tr>
+					<td>current_act</td>
+					<td><select id="current_actselect">
+							<option value ="YES">yes</option>
+							<option value ="NO">no</option>
+						</select></td>
+					<td>mortgage</td>
+					<td><select id="mortgageselect">
+							<option value ="YES">yes</option>
+							<option value ="NO">no</option>
+						</select></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id ='mainright'>
+		<p class="subtitle">kmeans</p>
+		<hr>
+		<div>
+			<table>
+				<tr>
+					<td>資料的群集:</td>
+					<td id="nowcluster"></td>
+					<td>是否會買:</td>
+					<td id="nowkmeanspep"></td>
+				</tr>
+			</table>
+		</div>
+		<p class="subtitle">knn</p>
+		<hr>
+		<div>
+			<table>
+				<tr>
+					<td>knn id:</td>
+					<td id="nowknnid"></td>
+					<td>knn pep:</td>
+					<td id="nowknnpep"></td>
+				</tr>
+			</table>
+		</div>
+		<p class="subtitle">交叉分析</p>
+		<hr>
+		<div>
+			<table>
+				<tr>
+					<td>分析結果:</td>
+					<td id="nowcafinal"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id ='maindown'>
+		<table>
+			<tr>
+				<td><button id='SendBtn' onclick="sendresult()">送出</button></td>
+				<td><button id='CountBtn' onclick="kmeans()">計算</button></td>
+				<td><button id='CrossAnaBtn'onclick="crossanalysis()">交叉分析</button></td>
+				<td><button id='KNNBtn' onclick="knn()">KNN</button></td>
+				<td><button id='CleanDataBtn' onclick="emptyInput()">清除資料</button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

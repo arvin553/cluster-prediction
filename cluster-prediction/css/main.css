@@ -1,0 +1,103 @@
+#mainleft{
+	width: 40%;
+	height: 60vh;
+	float: left;
+	padding: 5%;
+}
+
+#mainright{
+	width: 40%;
+	height: 60vh;
+	float: left;
+	padding: 5%;
+}
+
+#maindown{
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+table{
+	width: 100%;
+}
+#maindown table tr td{
+	width: 20%;
+	text-align: center;
+}
+
+#mainleft table tr td{
+	width: 25%;
+	font-size: 20px;
+}
+#mainright table tr td{
+	width: 25%;
+	font-size: 20px;
+}
+html{
+	font-family: 微軟正黑體;
+}
+.subtitle{
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+button{
+	width: 50%;
+	font-size: 25px;
+	border-radius: 10px;
+	background-color: #99ffcc;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	/*background: linear-gradient(-40deg,#99ccff,#cc99ff);*/
+	background-image: url("../coins.jpeg");
+	background-color: rgba(255,255,255,0.8);
+	background-blend-mode: lighten;
+	background-size: cover;
+}
+hr{
+	border: 0;
+	height: 2px;
+	background-image: linear-gradient(to right, #ccc,#333,#ccc);
+}
+
+
+@media(max-width: 1100px){
+	#mainleft{
+	width: 80%;
+	height: 35%;
+	padding: 0%;
+	padding-top: 2%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+	#mainright{
+	width: 80%;
+	height: 30%;
+	padding: 0%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+p{
+	margin: 0;
+}
+
+}
+
+@media(max-width: 1000px){
+	button{
+	width: 90%;
+}
+}
+
+@media(max-width: 700px){
+	#maindown{
+		position: relative;
+		float: left;
+	}
+}
